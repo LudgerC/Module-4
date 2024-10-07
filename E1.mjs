@@ -3,21 +3,21 @@ import{stdin as input, stdout as output} from 'node:process';
 const userInput = readline.createInterface({input, output});
 
 
-let zijde1 = parseFloat(await userInput.question("Geef het hoogte in: "));
-let zijde2 = parseFloat(await userInput.question("Geef het breedte in: "));
+let zijde1;
+let zijde2;
 
 do
 {
-    console.log("Het breedte moet hoger zijn dan hoogte!");
-    zijde1 = parseFloat(await userInput.question("Geef het hoogte in: "));
-    zijde2 = parseFloat(await userInput.question("Geef het breedte in: "));
+    
+    zijde1 = parseFloat(await userInput.question("Geef de hoogte in: "));
+    zijde2 = parseFloat(await userInput.question("Geef de breedte in: "));
 
-}while(zijde1 > zijde2);
+}while(zijde1 == zijde2);
 
 
 for(let i = 0; i < zijde1; i++)
 {
-    for(let j = 0; j < zijde2; j++)
+    for(let j = 0; j < (zijde2 - 1); j++)
     {
         process.stdout.write(" * ")
     }
