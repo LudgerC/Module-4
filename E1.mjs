@@ -11,6 +11,11 @@ do
     
     zijde1 = parseFloat(await userInput.question("Geef de hoogte in: "));
     zijde2 = parseFloat(await userInput.question("Geef de breedte in: "));
+    
+    if(zijde1 == zijde2)
+    {
+        console.log("Dit is geen rechthoek!");
+    }
 
 }while(zijde1 == zijde2);
 
