@@ -41,9 +41,9 @@ else if (startTop == true && startLeft == false)
     for (let i = 1; i <= hoogte; i++) 
     {
             
-        for (let k = 1; k <= hoogte - k; k++) 
+        for (let k = 1; k <= hoogte - i; k++) 
         {
-            process.stdout.write("");
+            process.stdout.write(" ");
         }
     
             
